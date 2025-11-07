@@ -1,0 +1,737 @@
+@charset "utf-8";
+
+/* body 基本設定（共通：common）
+------------------------------------------------------------*/
+/* font などはBootstrap Rebootで指定しています。*/
+* {
+  outline: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.7;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8ACBCF;
+  text-decoration: underline;
+}
+
+a[href^="tel:"] {
+  pointer-events: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+figure {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* smoothスクロール */
+}
+
+/* header  固定
+------------------------------------------------------------*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  width: 100%;
+  height: 4rem;
+  z-index: 100000;
+  overflow: hidden;
+}
+
+/* ロゴマーク&hamburgerbuttonのlayout
+------------------------------------------------------------*/
+.headerArea {
+  position: relative;
+}
+
+/* ロゴマーク
+------------------------------------------------------------*/
+h1 {
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  width: 8rem;
+  height: auto;
+  z-index: 10000;
+  margin-bottom: 0.5rem;
+}
+
+/* ナビゲーションのボタン（ハンバーガーボタン）
+------------------------------------------------------------*/
+/*hanbargar*/
+
+nav {
+  margin: 0 0 0 auto;
+  width: 150px;
+  padding: 0.5rem;
+  position: fixed;
+  top: 0rem;
+  right: 1rem;
+  z-index: 100000;
+  height: 4rem;
+}
+
+.btn {
+  text-align: right;
+}
+
+.btn a {
+  display: inline-block;
+  text-align: center;
+}
+
+#open a {
+  background: #eee;
+  width: 3.4rem;
+  line-height: 1.2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 1s;
+}
+
+#close a {
+  color: #fff;
+  background: #aaaaaa;
+  width: 3.4rem;
+  line-height: 2.5rem;
+  border-radius: 5px;
+}
+
+#g_menu li {
+  list-style: none;
+  padding: 1rem;
+}
+
+#g_menu a {
+  color: #fff;
+}
+
+#g_menu a i {
+  font-size: 0.6rem;
+}
+
+#g_menu {
+  height: 100%;
+  width: 60%;
+  padding: 0.5rem 1.5rem 0.5rem;
+  background: rgba(0, 0, 0, .6);
+  transition: right 1s;
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+}
+
+#g_menu:not(:target) {
+  right: -100%;
+}
+
+#g_menu:target {
+  right: 0;
+}
+
+nav i.fas.fa-angle-right {
+  padding-right: 0.5rem;
+  color: #FFFFFF;
+}
+
+/* main
+------------------------------------------------------------*/
+main {
+  padding-top: 6rem;
+}
+
+/* main 共通
+------------------------------------------------------------*/
+div#sec01,
+div#sec02,
+div#sec03,
+div#sec04,
+div#sec05,
+div#sec06 {
+  scroll-margin-top: 4rem;
+}
+
+/* layout */
+.container {
+  width: 100%;
+  padding: 4rem 10% 0;
+  margin: 0 0 2rem;
+}
+
+/* 各title */
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem 0 2rem;
+}
+
+/* メインビジュアル
+------------------------------------------------------------*/
+div.mainvisual {
+  width: 98%;
+  margin: 0 auto;
+}
+
+/* youtube
+------------------------------------------------------------*/
+/*
+div.movi {
+        position: relative;
+    }
+.youtube {
+
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+}
+.youtube iframe {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+		border-width: 0;
+    }
+*/
+
+/* SERVICE1・2(1.人間力・2．提案力)
+------------------------------------------------------------*/
+/* ブロック <h2>&<p> */
+ul.service {
+  padding: 4rem 0 0;
+}
+
+.service__box {
+  width: 100%;
+  background: #f6f6f6;
+  padding: 0rem 10% 2rem;
+}
+
+/* SERVICE3(3．対応力)
+------------------------------------------------------------*/
+/*background-img 固定でパララックス風 */
+.service03 {
+  background: url("../images/sec02_03.webp") no-repeat 100% 100% fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.service03__box {
+  margin-top: 0;
+  padding: 0 10% 2rem;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+/* CONTENTS(取扱商品)
+------------------------------------------------------------*/
+
+.contents li {
+  width: 100%;
+  background: #EEEEEE;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contents li img {
+  display: block;
+}
+
+.contents li h3,
+.contents li p {
+  padding: 0 1rem;
+}
+
+.contents li h3 {
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+/* VOICE(お客様の声)
+------------------------------------------------------------*/
+
+ul.voice {
+  /* PCで横並びにする設定があれば、ここで解除または調整 */
+  display: block; 
+}
+
+ul.voice li {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 0.1rem solid #a2a0a0;
+}
+/* ヘッダー部分（写真と見出し）を横並びにするラッパー */
+.voice__header {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 1.5rem; 
+}
+
+/* 見出しとボタンをフレックスで横並びにするラッパー */
+.voice__head-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /
+}
+
+/* お客様の写真 */
+.voice__photo {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden; 
+  border-radius: 50%; 
+  margin-right: 1.5rem;
+  border: 2px solid rgba(25, 85, 166, 0.2); 
+  flex-shrink: 0; 
+}
+
+.voice__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+ul.voice li:nth-child(4) .voice__photo img {
+    object-position: 50% 10%; 
+}
+
+/* 見出しと属性情報 */
+.voice__meta {
+  flex-grow: 1; 
+  min-width: 0; 
+}
+
+/* 属性情報（cite） */
+.voice cite {
+  display: block;
+  font-size: 0.9rem;
+  color: #666666;
+  margin-bottom: 0.2rem;
+  font-style: normal;
+}
+
+/* 見出し（h3） */
+.voice h3 {
+  flex-grow: 1;
+  margin-right: 1rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #333333; 
+  margin-bottom: 0; 
+}
+
+/* コメント本文（詳細部分）をデフォルトで非表示にする */
+.voice__detail {
+    display: none; 
+    padding-top: 1rem; 
+}
+
+/* 本文（p） */
+.voice p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  padding-left: 1rem; 
+  border-left: 3px solid #E0E0E0;
+}
+
+/* 詳しく見るボタンのスタイル */
+.btn__detail {
+    background: none;
+    border: 1px solid #1955a6; 
+    color: #1955a6;            
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.btn__detail:hover {
+    background-color: #1955a6; 
+    color: #ffffff;
+}
+
+
+/* NEWS(ニュース)
+------------------------------------------------------------*/
+
+ul.news li {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 0;
+  border-bottom: 0.1rem dotted #DDDDDD;
+}
+
+.news time {
+  width: 5rem;
+  line-height: 1.2;
+}
+
+.news h3 {
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+/*ABOUT(会社概要)
+------------------------------------------------------------*/
+.container.about {
+  background: #f6f6f6;
+}
+
+.about ul {
+  padding-bottom: 2rem;
+}
+
+.about dl {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.2;
+}
+
+.about dt {
+  display: block;
+  width: 40%;
+  padding: 1rem 10% 1rem 0;
+  text-align: left;
+}
+
+.about dd {
+  width: 60%;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.about dd p {
+  line-height: 1.7;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.map iframe {
+  border-width: 0;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+/* CTA button　contact
+------------------------------------------------------------*/
+.contact {
+  text-align: center;
+}
+
+.contact li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+  background-color: #FBE6B2;
+  border-radius: 4px;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.contact a {
+  display: block;
+  color: #666666;
+}
+
+.contact .far.fa-envelope,
+.contact .fas.fa-phone {
+  padding-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.contact .fas.fa-angle-right {
+  padding-left: 0.5rem;
+  font-size: 0.5rem;
+}
+
+/* フッター
+------------------------------------------------------------*/
+footer {
+  margin: 4rem 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0 10% 2rem;
+}
+
+footer ul li {
+  width: 10%;
+}
+
+footer p {
+  padding: 1rem 0;
+  background: #f6f6f6;
+}
+
+/* ここからパソコン用画面の設定
+------------------------------------------------------------*/
+@media screen and (min-width:756px) {
+
+  /*　PC用のheader 部分　高さの変更　*/
+  header {
+    height: 6rem;
+  }
+
+  /*　ロゴマークのサイズ変更　*/
+  h1 {
+    width: 12rem;
+  }
+
+  /* layout */
+  .container {
+    width: 70%;
+    padding: 0;
+    margin: 7rem auto;
+  }
+
+  /* 各title */
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 3rem 0 3rem;
+  }
+
+  /*　ナビゲーションの設定　*/
+  /*　ハンバーボタン非表示　*/
+  .btn {
+    display: none;
+  }
+
+  /*　スライドするメニューをデフォルト表示に戻します*/
+  nav {
+    margin: 0 0 0 auto;
+    width: 100%;
+    padding: 0.5rem;
+    position: static;
+  }
+
+  #g_menu {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 1.00);
+    position: static;
+  }
+
+  #g_menu a {
+    color: #333333;
+  }
+
+  #g_menu a i {
+    font-size: 0.6rem;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0 0;
+  }
+
+  nav ul li {
+    width: auto;
+  }
+
+  nav i.fas.fa-angle-right {
+    color: #333333;
+  }
+
+  .youtube {
+    width: 50%;
+    padding-top: 28.125%;
+  }
+
+  .youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+
+  /* SERVICE1・2(1.人間力と2.提案力)
+------------------------------------------------------------*/
+  /*　写真とテキストを交互に表示する設定　*/
+  div#sec01,
+  div#sec02,
+  div#sec03,
+  div#sec04,
+  div#sec05,
+  div#sec06 {
+    scroll-margin-top: 6rem;
+  }
+
+  ul.service {
+    padding: 6rem 0 0;
+  }
+
+  .service li {
+    display: flex;
+  }
+
+  .service li:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .service div.service__box {
+    width: 50%;
+  }
+
+  .service p {
+    width: 50%;
+  }
+
+  .service div.service__box p {
+    width: 100%;
+  }
+
+  /* SERVICE3(3.対応力)
+------------------------------------------------------------*/
+  /*　パララックス風の所　*/
+  .service03__box {
+    margin-top: 0;
+    padding: 0 20% 6rem;
+    height: 500px;
+  }
+
+  .service03__box p {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* contents(取扱商品)
+------------------------------------------------------------*/
+  ul.contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .contents li {
+    width: 32%;
+  }
+
+  /*　ABOUT(会社概要)　地図と横並びの設定*/
+  .about ul {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6rem;
+  }
+
+  .about ul li {
+    width: 50%;
+    padding: 0 5%;
+    vertical-align: top;
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /*　footerの設定　SNSのマーク横並び　*/
+  footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0 20% 4rem;
+  }
+
+  footer ul li {
+
+    padding: 2rem;
+  }
+
+  /* お問合せボタン　PC用　横並び*/
+  .contact ul {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  .contact ul li {
+    width: 48%;
+    padding: 1rem;
+  }
+
+  /*　パソコンでは電話がかからないように　*/
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  header div.headerArea {
+    width: 80%;
+    margin: 0 auto;
+    height: 5rem;
+  }
+
+  h1 {
+    position: fixed;
+    top: 2%;
+    left: 10%;
+  }
+}
